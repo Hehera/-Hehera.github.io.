@@ -1,0 +1,325 @@
+.sidebar {
+  padding-top: 51px;
+  padding-left: 56px;
+  padding-right: 103px;
+  padding-bottom: 57px;
+  width: 295px;
+  height: 100vh;
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: fixed;
+}
+
+.sidebar-logo {
+  margin-bottom: 57px;
+}
+
+.nav-title {
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 47px;
+  color: #000000;
+  margin-bottom: 44px;
+}
+
+.nav-list {
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.7099px;
+  color: #000000;
+  line-height: 3.4;
+  padding-bottom: 240px;
+}
+
+.nav-list a {
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16.7099px;
+  color: #000000;
+  transition: color 0.2s ease-in;
+}
+
+.nav-list img {
+  display: inline-block;
+  /* !  */
+  vertical-align: center;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.nav-list a:hover {
+  color: #fd2e24;
+}
+
+/* Help  */
+.help {
+  display: flex;
+  margin-left: 30px;
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  width: 200px;
+  font-size: 16.7099px;
+}
+
+.help-center {
+  width: 200px;
+}
+.help-img {
+  transform: translateY(-28%);
+  margin-right: 13px;
+  margin-bottom: 25px;
+  width: 47.13px;
+  bottom: 10px;
+}
+
+/* main  */
+.main {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+/* Search  */
+
+.search {
+  margin-right: -100px;
+  width: 400px;
+  height: 44px;
+}
+.search-label {
+  display: flex;
+}
+
+.search-input {
+  padding: 0px 17px;
+  flex-grow: 1;
+  font-family: "Circular Std";
+  font-weight: 500;
+  font-size: 17px;
+  border-radius: 15px;
+}
+.search-input:focus .search-input:active {
+  background-color: #fff;
+}
+.search-input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/* navigation  */
+
+.nav-header-list {
+  /* manufacturing */
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  column-gap: 42px;
+  color: #000000;
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  column-gap: 42px;
+  display: flex;
+  align-items: center;
+  right: 20px;
+}
+
+.header {
+  padding-top: 46px;
+  padding-right: 52px;
+  padding-left: 40px;
+  margin-bottom: -10px;
+
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.nav-header-list a {
+  color: #000000;
+}
+.nav-header-link-icon-first {
+  margin-left: 47px;
+}
+.nav-header-link-icon {
+  margin-left: -15px;
+}
+/* Hover  */
+.nav-header-link-text {
+  position: relative;
+}
+
+.nav-header-link-text::after {
+  position: absolute;
+  left: 0;
+  width: 0;
+  /* висота + низ = 9(7 + 2); */
+  bottom: -9;
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #000000;
+
+  transition: width 0.2s ease-in;
+}
+
+.nav-header-link-text.active::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  /* висота + низ = 9(7 + 2); */
+  bottom: -9;
+  content: "";
+  display: block;
+  width: 72px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.nav-header-link-text:hover::after {
+  width: 100%;
+}
+
+/* cards-wrapper  */
+
+.cards-wrapper {
+  /* рядок йде шириною а не довжиною (наглядний приклад = таким чином,а довжиною ось так ||) */
+  display: flex;
+  /* це те шо рядки йдуть в колонку в нашому випадку їх два  */
+  flex-direction: column;
+  /* верхній отступ між ними  */
+  row-gap: 20px;
+}
+
+.cards-wrapper-row {
+  /* кожен ряд йде по горизонталі   */
+  display: flex;
+  column-gap: 20px;
+}
+.cards-wrapper-col {
+}
+
+.col-horizontal {
+  display: flex;
+  column-gap: 20px;
+}
+.col-vertical {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+/* Cards  */
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 15px #73d6d3;
+}
+
+.card-horizontal {
+  width: 539px;
+  height: 180px;
+}
+.card-sale {
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.card-sale-text {
+  color: #000000;
+}
+
+.card-vertical {
+  width: 259px;
+  height: 380px;
+}
+
+.card-product {
+  position: relative;
+}
+
+.card-product-link {
+  width: 100%;
+  height: 100%;
+}
+
+.card-product-fav-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.card-product-fav-btn svg {
+  display: inline-block;
+  vertical-align: middle;
+
+  stroke: #000000;
+  fill: #fff;
+
+  transition: all 0.2s ease-in;
+}
+.card-product-fav-btn:hover svg {
+  stroke: #fd2e24;
+  fill: #fd2e24;
+}
+.card-product-img {
+  /* це у разі якшо картинка буде мати інші розміри щоб наша іконка не змінювала розміри зображення на якому вона лежить */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-section {
+  padding-left: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card-section-title {
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 3px;
+  color: #001aa2;
+}
+.card-section-desk {
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  color: #000000;
+}
+
+.card-section-red .card-section-title {
+  color: #fd2e24;
+}
